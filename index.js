@@ -41,7 +41,7 @@ const rl = readline.createInterface({
 });
 
 // Function to ask question 
-function askQuestion(questionOBJ) {
+function askQuestion(questionObj) {
     return new Promise((resolve) => {
         console.log("\n" + questionOBJ.question);
         questionOBJ.choices.forEach(choice => console.log(choice));
@@ -68,7 +68,7 @@ rl.question("\nType A, B, C, or D: ", (input) => {
 // Function to start the game
 async function startGame() {
     console.log("Welcome to the Trivia CLI Game!");
-    console.log('You have ${TOTAL_GAME_TIME} secons to answer all questions.');
+    console.log('You have ${TOTAL_GAME_TIME} seconds to answer all questions.');
     console.log("Press Enter to start...");
 
 await new Promise((resolve) => rl.question('', resolve));
